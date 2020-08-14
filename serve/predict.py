@@ -70,7 +70,7 @@ def predict_fn(input_data, model):
     #         data_X   - A sequence of length 500 which represents the converted review
     #         data_len - The length of the review
 
-    test_data, review_len = convert_and_pad(word_dict, review_to_words(input_data))
+    test_data, review_len = convert_and_pad(model.word_dict, review_to_words(input_data))
     data_X = test_data
     data_len = review_len
 
@@ -87,7 +87,9 @@ def predict_fn(input_data, model):
 
     # TODO: Compute the result of applying the model to the input data. The variable `result` should
     #       be a numpy array which contains a single integer which is either 1 or 0
-
-    result = model.forward(data)
+    
+    # detach() erases all the prior operations that were performed on the tensor.
+    
+    result = np.round(model.forward(data).detach().numpy()).astype(int)
 
     return result
