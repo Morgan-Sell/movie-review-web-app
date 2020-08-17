@@ -33,11 +33,11 @@
 
     </head>
     <body>
-        background = 'crumpled-paper.jpg'
-        <img src="thrillist.jfif" alt="Movie theatre audience" style="width: 800px; height: 300px;">
-        <div class="container">
-            <h1>Is your review positive, or negative?</h1>
-            <p>Enter your review below and click submit to find out...</p>
+        <body background = "crumpled-paper.jpg">
+        <img src="thrillist.jfif" alt="Movie theatre audience" style="position:relative; TOP:35px; LEFT:200px; width: 800px; height: 280px;">
+        <div class="container" style="position:relative; top:35px">
+            <h1><b>Did you enjoy the movie?</b></h1>
+            <p>Write a review below to see whether its sentiment is negative, neutral, or positive.</p>
             <form method="POST"
                   action="https://4m5qmzhyz6.execute-api.us-west-2.amazonaws.com/prod"
                   onsubmit="return submitForm(this);" >                     <!-- HERE IS WHERE YOU NEED TO ENTER THE API URL -->
