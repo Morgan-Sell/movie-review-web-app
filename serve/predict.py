@@ -90,6 +90,6 @@ def predict_fn(input_data, model):
     
     # detach() erases all the prior operations that were performed on the tensor.
     
-    result = np.round(model.forward(data).detach().numpy()).astype(int)
+    result = (model(data).data).cpu().numpy().round()
 
     return result

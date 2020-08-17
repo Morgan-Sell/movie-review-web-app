@@ -1,0 +1,1 @@
+Invoke URL (from API Gateway) - https://jj3yj5gxe8.execute-api.us-west-2.amazonaws.com/prod
