@@ -1,13 +1,22 @@
-[Web App]
+
 
 
 # Movie Review Sentiment Analysis
 
-Assesses whether a movie critique is positive or negative.
+What sentiment does your critique project?
 
+![Thank You](https://github.com/Morgan-Sell/movie-review-web-app/master/images/enjoy_the_show.jpg)
 
 ## Usage
+The user of this applications writes his/her review into the text box then select "Submit". A trained long short term memory (LSTM) model inform the user whether the sentiment of his/her critique is positive or negative. The image below is an example the application's response to a user's commentary of "Motherless Brooklyn."
 
-[Web App](https://github.com/Morgan-Sell/movie-review-web-app/tree/master/website/web-app-samp)
+![Web App](https://github.com/Morgan-Sell/movie-review-web-app/tree/master/images/web-app-sample.jpg)
 
-The above display is a screenshot of the web app. The user wrote his/her comments in the text box then selects "Submit". The trained LSTM model determined that the user's review of "Motherless Brooklyn" was positive.
+The application is deployed using AWS API Gateway, Lambda, and SageMaker. 
+
+![AWS Workflow](https://github.com/Morgan-Sell/movie-review-web-app/master/images/aws_work_flow.png)
+
+API Gateway provides the endpoint that receives the data provided by the user. Before being submitted to the LSTM model, the text is processed -  
+
+## Model Design
+The LSTM model was trained on 25,000 IMBd reviews, which were evently balanced positive and negative. The 
